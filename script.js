@@ -21,4 +21,17 @@ const members = [
     { name: 'Barbara Ramos', role: 'Graphic Designer', picture: 'barbara-ramos-graphic-designer.jpg'}
 ];
 
+// ? =======================
+// ?       SVOLGIMENTO
+// ? =======================
+
+for (let i = 0; i < members.length; i++) {
+    const member = members[i];
+    
+    for(let key in member) {
+        console.log(`${key} : ${member[key]}`)
+    }
+}
+
+
 
