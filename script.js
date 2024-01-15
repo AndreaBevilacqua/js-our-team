@@ -8,6 +8,8 @@ console.log('js ok');
 // ! RECUPERO ELEMENTI
 // ! ==================
 
+const listElement = document.querySelector('ul');
+
 // ~ ==================
 // ~      ARRAY
 // ~ ==================
@@ -25,13 +27,24 @@ const members = [
 // ?       SVOLGIMENTO
 // ? =======================
 
+let items = '';
+
 for (let i = 0; i < members.length; i++) {
     const member = members[i];
-    
+
+    items += `
+    <li>
+       <div><strongo>Name:</strong> ${member.name}</div>
+       <div><strongo>Role:</strong> ${member.role}</div>
+       <div><strongo>Picture:</strong> ${member.picture}</div>
+    </li>
+    `    
     for(let key in member) {
         console.log(`${key} : ${member[key]}`)
     }
 }
+
+listElement.innerHTML = items;
 
 
 
